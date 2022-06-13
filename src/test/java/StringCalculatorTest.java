@@ -33,4 +33,10 @@ class StringCalculatorTest {
         assertEquals(53, stringCalculator.add("1,2,5,10,20,15"));
     }
 
+    @Test
+    void When_SumOfNumbers_With_NewlineAsDelimiter_Expect_SumOfNumbers() {
+        assertEquals(6, stringCalculator.add("1\n2,3"));
+        assertEquals(20, stringCalculator.add("1\n2\n3\n4\n10"));
+    }
+
 }
