@@ -39,4 +39,10 @@ class StringCalculatorTest {
         assertEquals(20, stringCalculator.add("1\n2\n3\n4\n10"));
     }
 
+    @Test
+    void When_SumOfNumbers_With_CustomDelimiter_Expect_SumOfNumbers() {
+        assertEquals(3, stringCalculator.add("//;\n1;2"));
+        assertEquals(15, stringCalculator.add("//'\n1'2'5'7"));
+    }
+
 }
