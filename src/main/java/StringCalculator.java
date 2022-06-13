@@ -14,6 +14,7 @@ public class StringCalculator {
         checkForNegatives(nums);
         return Arrays.stream(nums)
                 .mapToInt(Integer::parseInt)
+                .filter(number -> number <= 1000)
                 .sum();
     }
 

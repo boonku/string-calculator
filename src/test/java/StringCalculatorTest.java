@@ -66,4 +66,11 @@ class StringCalculatorTest {
         assertTrue(thrown3.getMessage().contains(errorMessage));
     }
 
+    @Test
+    void When_Sum_With_NumbersOverOneThousand_Expect_SumWithoutThem() {
+        assertEquals(2, stringCalculator.add("2,1001"));
+        assertEquals(1, stringCalculator.add("1,1001,1002,2000"));
+        assertEquals(2000, stringCalculator.add("1,1001,999,1000"));
+    }
+
 }
