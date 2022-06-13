@@ -27,4 +27,10 @@ class StringCalculatorTest {
         assertEquals(3, stringCalculator.add("1,2"));
     }
 
+    @Test
+    void When_SumOfManyNumbers_Expect_SumOfNumbers() {
+        assertEquals(6, stringCalculator.add("1,2,3"));
+        assertEquals(53, stringCalculator.add("1,2,5,10,20,15"));
+    }
+
 }

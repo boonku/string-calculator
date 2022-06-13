@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class StringCalculator {
 
     public int add(String numbers) {
@@ -5,11 +7,9 @@ public class StringCalculator {
             return 0;
         }
         String[] nums = numbers.split(",");
-        int sum = 0;
-        for (String num : nums) {
-            sum += Integer.parseInt(num);
-        }
-        return sum;
+        return Arrays.stream(nums)
+                .mapToInt(Integer::parseInt)
+                .sum();
     }
 
 }
